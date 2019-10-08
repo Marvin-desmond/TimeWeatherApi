@@ -5,8 +5,7 @@ const readline = require('readline').createInterface({
 })
 readline.question(`Place and Zipcode:`, (place) => {
 	//input is as below
-	//Los Angeles,90001
-	//without spaces between the comma
+	//Los Angeles, 90001
   let cityZip = place.split(",")
   let city = cityZip[0].trim()
   let zipCode = cityZip[1].trim()
