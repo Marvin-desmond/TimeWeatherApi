@@ -8,8 +8,8 @@ readline.question(`Place and Zipcode:`, (place) => {
 	//Los Angeles,90001
 	//without spaces between the comma
   let cityZip = place.split(",")
-  let city = trim(cityZip[0])
-  let zipCode = trim(cityZip[1])
+  let city = cityZip[0].trim()
+  let zipCode = cityZip[1].trim()
   readline.close()
   getTimeWeather(city,zipCode)
 })
