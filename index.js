@@ -4,12 +4,12 @@ const readline = require('readline').createInterface({
   output: process.stdout
 })
 readline.question(`Place and Zipcode:`, (place) => {
-	//input is as below 
+	//input is as below
 	//Los Angeles,90001
 	//without spaces between the comma
   let cityZip = place.split(",")
-  let city = cityZip[0]
-  let zipCode = cityZip[1]
+  let city = trim(cityZip[0])
+  let zipCode = trim(cityZip[1])
   readline.close()
   getTimeWeather(city,zipCode)
 })
@@ -39,4 +39,3 @@ axios.get(`https://weather.cit.api.here.com/weather/1.0/report.json?product=obse
   });
 
 }
-
